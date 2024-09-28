@@ -8,7 +8,7 @@ const generatePromptToFormatDate = (history: string) => {
     const prompt = `Fecha de Hoy:${getFullCurrentDate()}, Basado en el Historial de conversacion: 
     ${history}
     ----------------
-    Fecha ideal:...dd / mm hh:mm`
+    Fecha ideal:...YYYY/dd/mm hh:mm`
 
     return prompt
 }
@@ -25,8 +25,10 @@ const generateJsonParse = (info: string) => {
         "email": "fef@fef.com",
         "startDate": "2024/02/15 00:00:00"
     }
-    
+    no olvides poner el año de 4 cifras en startDate
     Objeto JSON a generar:`
+
+    console.log(prompt)
 
     return prompt
 }

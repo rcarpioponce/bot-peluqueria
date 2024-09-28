@@ -5,7 +5,7 @@ import { format, addMinutes } from 'date-fns'
  * @returns 
  */
 const getCurrentCalendar = async (): Promise<string> => {
-    const dataCalendarApi = await fetch('https://hook.eu2.make.com/yvwkwwxs82vw3o23j7ndtv3luhtvucus')
+    const dataCalendarApi = await fetch('https://hook.us1.make.com/6331ap5kzsdi9s2jasmy9qi9r4vgt6db')
     const json: any[] = await dataCalendarApi.json()
     const list = json.reduce((prev, current) => {
         return prev += [
@@ -22,11 +22,12 @@ const getCurrentCalendar = async (): Promise<string> => {
  * @param text 
  * @returns 
  */
+
 const appToCalendar = async (text: string) => {
     try {
         const payload = JSON.parse(text)
         console.log(payload)
-        const dataApi = await fetch('https://hook.eu2.make.com/nrbolpvmtt730jgyepvpb4qz3c0145s6', {
+        const dataApi = await fetch('https://hook.us1.make.com/3cwhf0196rg0vyblkwhuax6asdakuaq6', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",
